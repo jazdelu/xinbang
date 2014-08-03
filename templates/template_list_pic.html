@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %}建筑工程{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="/static/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+{% endblock %}
+{% block content %}
+    <!-- bannerBar begin -->
+    <section>
+        <div id="bannerBar">
+        	<img src="/static/xinbang/images/title.png" width="100%">
+        </div>
+    </section>
+    <!-- bannerBar end -->
+
+    <!-- content begin -->
+    <section>
+        <div id="content">
+            <div class="titleBar">
+                 <div class="breadCrumb">
+                    <a href="index.html" target="_self">首页</a>
+                    &gt;
+                    <a href="index.html" target="_self">{{ menu.get_root.name }}</a>
+                    &gt;
+                    <a href="#" target="_self">{{ menu.name }}</a>
+                </div>
+                <ul class="tabBar">
+                	{% for m in menu.get_root.get_children reversed  %}
+                    <li data="{{ m.id }}">
+                        <a href="{{ m.url }}" target="_self" data="{{ m.id }}">{{ m.name }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- picCon begin -->
+            <div class="picCon">
+                <ul class="picList">
+                	{% for p in posts %}
+                    <li>
+                        <div class="cover">
+                        	{% if p.cover %}
+                            <a href="{{ p.cover.url }}" title="{{ p.title }}" class="fancybox"><img src="{{ p.cover.url }}" width="320px" height="250px" /></a>
+                        	{% else %}
+                        	<a href="#"><img src="http://placehold.it/320x250"/></a>
+                        	{% endif %}
+                        </div>
+                        <div class="name">
+                            <a href="{{ p.cover.url }}" title="{{ p.title }}" class="fancybox">{{ p.title }}</a>
+                        </div>
+                    </li>
+                    {% empty %}
+                    <label>暂无内容</label>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- picCon end -->
+ 
+            <!-- pagination begin -->
+            <!--  <div id="pagination">
+                    <a href="#" target="_self" class="active">1</a>
+                    <a href="#" target="_self">2</a>
+                    <a href="#" target="_self">3</a>
+                    <a href="#" target="_self">4</a>
+                    <a href="#" target="_self">5</a>
+                </div>
+             -->
+            <!-- pagination end -->
+
+        </div>
+    </section>
+    <!-- content end -->
+
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript" src="/static/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script>
+    $(".fancybox").fancybox({
+    	openEffect	: 'elastic',
+    	closeEffect	: 'elastic',
+
+    	helpers : {
+    		title : {
+    			type : 'inside'
+    		}
+    	}
+    });
+</script>
+{% endblock %}

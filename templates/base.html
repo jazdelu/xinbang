@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset= "utf-8">
+	<meta name="author" content="拓边网络">
+	<meta name="description" content = "新邦建设集团">
+	<link rel="shortcut icon" type="image/x-icon" href="/static/xinbang/images/logo.jpg" media="screen">
+	<link rel="stylesheet" type="text/css" href="/static/xinbang/css/style.css">
+	{% block css %}{% endblock %}
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<!-- header begin -->
+<header>
+    <div id="header">
+        <div class="headerCon">
+            <div class="logo">
+                <img src="/static/xinbang/images/logo_bar.jpg" alt="浙江新邦集团控股有限公司">
+            </div>
+            <ul class="navBar">
+            	{% for i in items reversed %}
+	            	{% if i.is_root_node %}
+	                <li data ="{{ i.id }}">
+	                    <a href="{{ i.url }}" target="_self">{{ i.name }}</a>
+	                </li>
+	                {% endif %}
+                {% empty %}
+                <label>请先至后台设置菜单栏</label>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- header end -->
+{% block content %}
+{% endblock %}
+
+
+<!-- footer begin -->
+<section>
+    <div id="footer">
+        <div class="footerCon">
+            <div class="leftPart">
+                <p>
+                    <a href="" target="_blank">关于我们</a>
+                    /
+                    <a href="" target="_blank">加入我们</a>
+                    /
+                    <a href="" target="_blank">联系我们</a>
+                    /
+                    <a href="" target="_blank">网站地图</a>
+                    /
+                    <a href="" target="_blank">友情链接</a>
+                </p>
+                <p>Copyright©2014 Zhejiang Xinbang All Rights Reserved.</p>
+                <p>浙ICP备08102123号-1</p>
+            </div>
+            <div class="rightPart">
+                <p>地址：浙江省温州市鹿城区民航路文景花苑3幢2楼</p>
+                <p>电话：0577-88888888</p>
+                <p>E-mail:zjxbjs@163.com </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- footer end -->
+
+<script src="/static/xinbang/js/jquery-1.10.1.min.js"></script>
+<script>
+	var id = "{{ menu.get_root.id }}"
+	var s = ".navBar>li[data="+id+"]";
+	$(s).addClass("active");
+
+	id = "{{ menu.id }}";
+	s = ".tabBar>li[data="+id+"]";
+	$(s).addClass("active");
+</script>
+{% block js %}
+{% endblock %}
+</body>
+</html>
+</body>
+</html>

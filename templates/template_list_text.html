@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}最新公告{% endblock %}
+{% block content %}
+    <!-- bannerBar begin -->
+    <section>
+        <div id="bannerBar">
+        	<img src="/static/xinbang/images/title.png" width="100%">
+        </div>
+    </section>
+    <!-- bannerBar end -->
+
+    <!-- content begin -->
+    <section>
+        <div id="content">
+            <div class="titleBar">
+                <div class="breadCrumb">
+                    <a href="index.html" target="_self">首页</a>
+                    &gt;
+                    <a href="index.html" target="_self">{{ menu.get_root.name }}</a>
+                    &gt;
+                    <a href="#" target="_self">{{ menu.name }}</a>
+                </div>
+                <ul class="tabBar">
+                	{% for m in menu.get_root.get_children reversed  %}
+                    <li data="{{ m.id }}">
+                        <a href="{{ m.url }}" target="_self" data="{{ m.id }}">{{ m.name }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- newsCon begin -->
+            <div class="newsCon">
+                <ul class="newsList">
+                	{% for p in posts %}
+                    <li>
+                        <div class="newsTitle">
+                            <a href="/post/{{ p.id }}" target="_blank">{{ p.title }}</a>
+                        </div>
+                        <div class="dateTime">
+                            {{ p.pub_date|date:"Y-m-d" }}
+                        </div>
+                    </li>
+                    {% empty %}
+                    <label>暂无内容</label>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- newsCon end -->
+
+            <!-- pagination begin -->
+            <!--  <div id="pagination">
+                    <a href="#" target="_self" class="active">1</a>
+                    <a href="#" target="_self">2</a>
+                    <a href="#" target="_self">3</a>
+                    <a href="#" target="_self">4</a>
+                    <a href="#" target="_self">5</a>
+                </div>
+             -->
+            <!-- pagination end -->
+        </div>
+    </section>
+    <!-- content end -->
+{% endblock %}
