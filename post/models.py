@@ -2,6 +2,7 @@
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
 from ckeditor.fields import RichTextField
+import datetime
 # Create your models here.
 TEMPLATE_CHOICE = (
 	('0',u'新闻列表'),
@@ -42,7 +43,7 @@ class Post(models.Model):
 	category = TreeForeignKey(Category,verbose_name = u'分类目录',related_name = 'posts')
 	content = RichTextField(verbose_name = u'文章内容',config_name='default', blank = True, null = True)
 	cover = models.ImageField(upload_to = 'cover/', verbose_name = u'封面图片', blank = True, null = True)
-	pub_date = models.DateTimeField(verbose_name=u'文章发布时间')
+	pub_date = models.DateTimeField(verbose_name=u'文章发布时间',default = datetime.datetime.today())
 	last_modified = models.DateTimeField(verbose_name=u'最近修改时间',auto_now = True)
 
 	def __unicode__(self):

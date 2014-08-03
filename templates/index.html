@@ -69,7 +69,7 @@
 						<img src="http://placehold.it/170x120" />
 						{% endif %}
 						<div>
-							<p>2014-05-06</p>
+							<p>{{ p.pub_date|date:"Y-m-d" }}</p>
 							<a href="/post/{{ p.id }}">{{ p.title }}</a>
 						</div>
 					</li>
