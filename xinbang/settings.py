@@ -42,10 +42,6 @@ INSTALLED_APPS = (
     'south',
     'ckeditor',
     'mptt',
-    'page',
-    'post',
-    'menu',
-    'util',
 )
 
 MIDDLEWARE_CLASSES = (
