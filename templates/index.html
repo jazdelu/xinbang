@@ -85,7 +85,7 @@
 						{% endif %}
 						<div>
 							<p>{{ p.pub_date|date:"Y-m-d" }}</p>
-							<a href="/post/{{ p.id }}">{{ p.titletruncatechars:25 }}</a>
+							<a href="/post/{{ p.id }}">{{ p.title|truncatechars:25 }}</a>
 						</div>
 					</li>
 					{% endfor %}
@@ -113,7 +113,7 @@
 				<ul>
 					{% for p in zxgg %}
 					<li>
-						<a href="#">{{ p.titletruncatechars:25 }}</a>
+						<a href="#">{{ p.title|truncatechars:25 }}</a>
 						<span>{{ p.pub_date|date:"Y-m-d" }}</span>
 					</li>
 					{% endfor %}
