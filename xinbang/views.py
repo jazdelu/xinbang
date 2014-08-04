@@ -9,7 +9,7 @@ def homepage(request):
 	xwkx = Post.objects.filter(category__name = u'新闻快讯')[:2]
 	today = datetime.datetime.today()
 	persons = Person.objects.filter(birthday__month = today.month).filter(birthday__day = today.day)
-	messages = Message.objects.filter(pub_date__lte = today)[:5]
+	messages = Message.objects.filter(pub_date__lte = today)[:3]
 	print messages
 	return render_to_response("index.html",{ 'xwkx':xwkx, 'zxgg':zxgg, 'persons':persons, 'messages':messages },context_instance=RequestContext(request))
 
