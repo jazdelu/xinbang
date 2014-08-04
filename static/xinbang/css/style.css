@@ -280,6 +280,7 @@ span,p,li{
     padding: 25px 0px;
     border-bottom: 1px solid #eee;
     overflow:hidden;
+    height: 165px;
 }
 #row1>.cat>ul>li>*{
     float: left;
@@ -288,9 +289,11 @@ span,p,li{
     float: left;
 }
 #row1>.cat>ul>li>div{
+    width: 290px;
     float: left;
-    padding-left: 30px;
-    padding-top:30px;
+    padding-left: 65px;
+    padding-top:45px;
+    padding-bottom: 45px;
 }
 #row1>.cat>ul>li>div>p{
     font-size: 12px;
