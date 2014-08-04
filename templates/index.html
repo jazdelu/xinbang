@@ -78,11 +78,13 @@
 				<ul>
 					{% for p in xwkx %}
 					<li>
+                        <div class="cover">
 						{% if p.cover %}
-						<img src="{{ p.cover.url }}" width = "170px" height="120px" >
+						<img src="{{ p.cover.url }}" width = "170px" height="125px" >
 						{% else %}
 						<img src="http://placehold.it/170x120" />
 						{% endif %}
+                        </div>
 						<div>
 							<p>{{ p.pub_date|date:"Y-m-d" }}</p>
 							<a href="/post/{{ p.id }}">{{ p.title|truncatechars:18 }}</a>

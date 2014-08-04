@@ -277,7 +277,6 @@ span,p,li{
     padding: 0px 20px;
 }
 #row1>.cat>ul>li{
-    padding: 25px 0px;
     border-bottom: 1px solid #eee;
     overflow:hidden;
     height: 165px;
@@ -285,8 +284,9 @@ span,p,li{
 #row1>.cat>ul>li>*{
     float: left;
 }
-#row1>.cat>ul>li>img{
+#row1>.cat>ul>li>.cover{
     float: left;
+    padding: 20px 0px;
 }
 #row1>.cat>ul>li>div{
     width: 225px;
