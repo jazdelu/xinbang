@@ -3,18 +3,18 @@
 {% block content %}
     <section>
         <div id="bannerBar">
-        	<img src="/static/xinbang/images/title.png" width="100%">
+        	<img src="{{ post.category.cover.url }}" width="100%">
         </div>
     </section>
      <section>
         <div id="content">
             <div class="titleBar">
-                <div class="breadCrumb">
-                    <a href="index.html" target="_self">首页</a>
+                 <div class="breadCrumb">
+                    <a href="/" target="_self">首页</a>
                     &gt;
-                    <a href="index.html" target="_self">{{ menu.get_root.name }}</a>
+                    <a href="{{ menu.get_root.url }}" target="_self">{{ menu.get_root.name }}</a>
                     &gt;
-                    <a href="#" target="_self">{{ menu.name }}</a>
+                    <a href="{{ menu.name.url }}" target="_self">{{ menu.name }}</a>
                 </div>
                 <ul class="tabBar">
                     {% for m in menu.get_root.get_children reversed  %}

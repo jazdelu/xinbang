@@ -506,8 +506,14 @@ span,p,li{
 }
 .picList>li{
     float: left;
-    margin-right:20px; 
-    margin-bottom: 20px;
+    margin-right:14px; 
+    margin-bottom: 14px;
+    padding: 2px;
+    background-color: #fff
+}
+.picList>li:hover{
+    float: left;
+    background-color: #b22b25;
 }
 .picList>li:hover>.name>a{
     background-color: #b22b25;
@@ -526,7 +532,7 @@ span,p,li{
 /*  template picture_text(pt)  */
 .ptCon {
     width: 1000px;
-    margin: 40px auto;
+    margin: 20px auto;
     padding-bottom: 120px;
     overflow: hidden;
 }
@@ -558,6 +564,7 @@ span,p,li{
     overflow: hidden;
     margin-bottom: 20px;
     width: 100%;
+    font-size: 16px;
 }
 
 .ptList .ptTitle>a{
@@ -576,6 +583,7 @@ span,p,li{
 }
 .ptList .content{
     color:#777;
+    font-size: 14px;
 }
 .ptList .panel{
     margin-top: 20px;

@@ -4,7 +4,7 @@
     <!-- bannerBar begin -->
     <section>
         <div id="bannerBar">
-        	<img src="/static/xinbang/images/title.png" width="100%">
+        	<img src="{{ category.cover.url }}" width="100%">
         </div>
     </section>
     <!-- bannerBar end -->
@@ -13,12 +13,12 @@
     <section>
         <div id="content">
             <div class="titleBar">
-                <div class="breadCrumb">
-                    <a href="index.html" target="_self">首页</a>
+                 <div class="breadCrumb">
+                    <a href="/" target="_self">首页</a>
                     &gt;
-                    <a href="index.html" target="_self">{{ menu.get_root.name }}</a>
+                    <a href="{{ menu.get_root.url }}" target="_self">{{ menu.get_root.name }}</a>
                     &gt;
-                    <a href="#" target="_self">{{ menu.name }}</a>
+                    <a href="{{ menu.name.url }}" target="_self">{{ menu.name }}</a>
                 </div>
                 <ul class="tabBar">
                     {% for m in menu.get_root.get_children reversed  %}
@@ -53,7 +53,7 @@
                                 {{ p.content|striptags|truncatechars:220 }}
                             </div>
                             <div class="panel">
-                                <a href="/post/{{ p.id }}/">查看更多></a>
+                                <a href="/post/{{ p.id }}/">查看详情></a>
                             </div>
                         </div>
                     </li>
