@@ -12,15 +12,24 @@
     .slider ul li { float: left; }
     .slider ul li img { display: block; margin: 0 auto; }
     #controls {
-        display: block;
-        position: relative;
-        overflow: hidden;
-        text-align: center;
-        margin: 0 auto;
-        margin-top: 30px;
-        width:200px;
-        height:8px;
-        z-index: 1024;
+      position: absolute;
+      bottom: 0;
+      left: 45%;
+      overflow: hidden;
+      text-align: center;
+      margin: 0 auto;
+      width:200px;
+      height:8px;
+      z-index: 1024;
+    }
+
+    #controls ol.controls {
+        margin: 0;
+        padding: 0;
+        line-height: 8px;
+        height: 8px;
+        font-size: 0;
+        list-style-type: none;
     }
 
     .controls li {
@@ -48,15 +57,15 @@
 
 <div class="index">
 	<section>
-        <div style="text-align:center;position:relative;">
         <div class="sliderBox">
-            <ul>
-                <li><img src="/static/xinbang/images/banner.png"></li>
-                <li><img src="/static/xinbang/images/banner.png"></li>
-                <li><img src="/static/xinbang/images/banner.png"></li>
-                <li><img src="/static/xinbang/images/banner.png"></li>
-            </ul>
-        </div>
+            <div class="slider has-dots" id="slider" style="width: 1280px; height: 400px; overflow: hidden; margin: 0 auto;">
+                <ul style="position: relative;">
+                    <li style="float: left; width: 1280px;"><img src="/static/xinbang/images/banner.png"></li>
+                    <li style="float: left; width: 1280px;"><img src="/static/xinbang/images/banner.png"></li>
+                    <li style="float: left; width: 1280px;"><img src="/static/xinbang/images/banner.png"></li>
+                    <li style="float: left; width: 1280px;"><img src="/static/xinbang/images/banner.png"></li>
+                </ul>
+            </div>
         </div>
 	</section>
 	<section>
@@ -76,7 +85,7 @@
 						{% endif %}
 						<div>
 							<p>{{ p.pub_date|date:"Y-m-d" }}</p>
-							<a href="/post/{{ p.id }}">{{ p.title }}</a>
+							<a href="/post/{{ p.id }}">{{ p.titletruncatechars:25 }}</a>
 						</div>
 					</li>
 					{% endfor %}
@@ -104,7 +113,7 @@
 				<ul>
 					{% for p in zxgg %}
 					<li>
-						<a href="#">{{ p.title }}</a>
+						<a href="#">{{ p.titletruncatechars:25 }}</a>
 						<span>{{ p.pub_date|date:"Y-m-d" }}</span>
 					</li>
 					{% endfor %}
@@ -165,7 +174,7 @@
 <script src="/static/xinbang/js/sudoSlider.min.js"></script>
 <script>
     $(document).ready(function(){
-        var sudoSlider = $(".sliderBox").sudoSlider({
+        var sudoSlider = $("#slider").sudoSlider({
             numeric: true,
             effect: "slide",
             speed : 1000,
