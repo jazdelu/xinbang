@@ -2,56 +2,62 @@
 {% block title %}浙江新邦集团控股有限公司{% endblock %}
 {% block css %}
 <style>
-.slider { position: relative; overflow: auto; }
-.slider li { list-style: none; }
-.slider ul li { float: left; }
-.slider ul li img { display: block; margin: 0 auto; }
-.dots {
-  position: absolute;
-  bottom: 5px;
-  left: 45%;
-  overflow: hidden;
-  text-align: center;
-  margin: 0 auto;
-  width:200px;
-  height:20px;
-  z-index: 1024;
-}
+    .sliderBox{
+        height: 422px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .slider { position: relative; overflow: auto; border-bottom: #eeeeee 1px solid;}
+    .slider li { list-style: none; }
+    .slider ul li { float: left; }
+    .slider ul li img { display: block; margin: 0 auto; }
+    #controls {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 30px;
+        width:200px;
+        height:8px;
+        z-index: 1024;
+    }
 
-.dots li {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 8px;
-  text-indent: -999em;
-  border: 2px solid #000;
-  border-radius: 10px;
-  cursor: pointer;
-  background-color: #000;
-  opacity: .4
-  -webkit-transition: background .5s, opacity .5s;
-  -moz-transition: background .5s, opacity .5s;
-  transition: background .5s, opacity .5s;
-}
+    .controls li {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin: 0 8px;
+        text-indent: -999em;
+        border: 1px solid #000;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: #FFF;
+        -webkit-transition: background .5s, opacity .5s;
+        -moz-transition: background .5s, opacity .5s;
+        transition: background .5s, opacity .5s;
+    }
 
-.dots li.active {
-  background: #fff;
-  opacity: 1;
-}
+    .controls li.current {
+        background: #000;
+        opacity: 1;
+    }
 </style>
 {% endblock %}
 {% block content %}
 
 <div class="index">
 	<section>
-		<div class="slider has-dots">
-			<ul>
-				<li><img src = "/static/xinbang/images/banner.jpg"/></li>
-				<li><img src = "/static/xinbang/images/banner.jpg"/></li>
-				<li><img src = "/static/xinbang/images/banner.jpg"/></li>
-				<li><img src = "/static/xinbang/images/banner.jpg"/></li>
-			<ul>
-		</div>
+        <div style="text-align:center;position:relative;">
+        <div class="sliderBox">
+            <ul>
+                <li><img src="/static/xinbang/images/banner.png"></li>
+                <li><img src="/static/xinbang/images/banner.png"></li>
+                <li><img src="/static/xinbang/images/banner.png"></li>
+                <li><img src="/static/xinbang/images/banner.png"></li>
+            </ul>
+        </div>
+        </div>
 	</section>
 	<section>
 		<div id="row1">
@@ -76,9 +82,16 @@
 					{% endfor %}
 				</ul>
 			</div>
-			<div id ="col-2">
-				<img src="/static/xinbang/images/chanye.jpg" width = "450px" height="400">
-			</div>
+            <div id="col-2">
+                <a href="#" class="btn_1" title="温州新邦置业有限公司"></a>
+                <a href="#" class="btn_2" title="浙江新邦建设有限公司"></a>
+                <a href="#" class="btn_3" title="温州华邦混凝土有限公司"></a>
+                <a href="#" class="btn_4" title="浙江弘邦建材有限公司"></a>
+                <a href="#" class="btn_5" title="温州新邦文化产业有限公司"></a>
+                <a href="#" class="btn_6" title="温州尚利建材有限公司"></a>
+                <a href="#" class="btn_7" title="温州创源水务有限公司"></a>
+                <a href="#" class="btn_8" title="温州新邦运输有限公司"></a>
+            </div>
 		</div>
 	</section>
 	<section>
@@ -114,20 +127,24 @@
 	<section>
 		<div id = "row3">
 			<div id="col-5">
-				<div>
-					<img src="/static/xinbang/images/jingpin.jpg">
-					<div class="titleBar">
-						<span>精品工程</span>
-						<a href="/category/8/">更多 ></a>
-					</div>
-				</div>
-				<div>
-					<img src="/static/xinbang/images/gongyi.jpg">
-					<div class="titleBar">
-						<span>公益事业</span>
-						<a href="/category/6/">更多 ></a>
-					</div>
-				</div>
+                <div>
+                    <div class="imgBox">
+                        <img src="/static/xinbang/images/img1.jpg">
+                    </div>
+                    <div class="titleBar">
+                        <span>精品工程</span>
+                        <a href="/category/8/">更多 ></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="imgBox">
+                        <img src="/static/xinbang/images/img1.jpg">
+                    </div>
+                    <div class="titleBar">
+                        <span>公益事业</span>
+                        <a href="/category/6/">更多 ></a>
+                    </div>
+                </div>
 			</div>
 			<div id="col-6">
 				<ul>
@@ -145,18 +162,26 @@
 </div>
 {% endblock %}
 {% block js %}
-<script src="/static/xinbang/js/unslider.min.js"></script>
+<script src="/static/xinbang/js/sudoSlider.min.js"></script>
 <script>
-	$(".navBar>li:last-child").addClass("active");	
-	$(function() {
-	$('.slider').unslider({
-	  speed: 300,               //  The speed to animate each slide (in milliseconds)
-	  delay: 5000,              //  The delay between slide animations (in milliseconds)
-	  complete: function() {},  //  A function that gets called after every slide animation
-	  keys: true,               //  Enable keyboard (left, right) arrow shortcuts
-	  dots: true,               //  Display dot navigation
-	  fluid: false              //  Support responsive design. May break non-responsive designs
-	});
-	});
+    $(document).ready(function(){
+        var sudoSlider = $(".sliderBox").sudoSlider({
+            numeric: true,
+            effect: "slide",
+            speed : 1000,
+            auto : true,
+            prevNext: false
+        });
+
+        //bindEvent
+
+        $("#slider")
+                .on("mouseover", function () {
+                    sudoSlider.stopAuto();
+                })
+                .on("mouseleave", function () {
+                    sudoSlider.startAuto();
+                });
+    });
 </script>
 {% endblock %}
