@@ -87,7 +87,7 @@
                         </div>
 						<div>
 							<p>{{ p.pub_date|date:"Y-m-d" }}</p>
-							<a href="/post/{{ p.id }}">{{ p.title|truncatechars:18 }}</a>
+							<a href="/post/{{ p.id }}">{{ p.title|truncatechars:30 }}</a>
 						</div>
 					</li>
 					{% endfor %}
