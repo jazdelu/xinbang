@@ -80,7 +80,7 @@
 					<li>
                         <div class="cover">
 						{% if p.cover %}
-						<img src="{{ p.cover.url }}" width = "170px" height="125px" >
+						<a href="/post/{{ p.id }}"><img src="{{ p.cover.url }}" width = "170px" height="125px" ></a>
 						{% else %}
 						<img src="http://placehold.it/170x120" />
 						{% endif %}
