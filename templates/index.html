@@ -128,7 +128,7 @@
 				<ul>
 					{% for m in messages %}
 					<li>
-						{{ m.content }}
+						{{ m.content|truncatechars:60 }}
 					</li>
 					{% endfor %}
 				</ul>
