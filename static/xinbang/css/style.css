@@ -286,6 +286,7 @@ span,p,li{
 }
 #row1>.cat>ul>li>.cover{
     float: left;
+    width: 170px;
     padding: 20px 0px;
 }
 #row1>.cat>ul>li>div{
