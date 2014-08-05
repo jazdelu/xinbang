@@ -1,6 +1,47 @@
 {% extends "base.html" %}
-{% block title %}{% page.title %}{% endblock %}
+{% block title %}{{ page.title }}{% endblock %}
 {% block css %}
 <link rel="stylesheet" type="text/css" href="/static/xinbang/css/speech.css">
 {% endblock %}
 {% block content %}
+<!-- bannerBar begin -->
+<section>
+    <div id="bannerBar">
+    	<img src="{{ page.banner.url }}" width="100%">
+    </div>
+</section>
+<!-- bannerBar end -->
+
+<!-- content begin -->
+<section>
+    <div id="content">
+        <div class="titleBar">
+             <div class="breadCrumb">
+                <a href="/" target="_self">首页</a>
+                &gt;
+                <a href="{{ menu.get_root.url }}" target="_self">{{ menu.get_root.name }}</a>
+                &gt;
+                <a href="{{ menu.name.url }}" target="_self">{{ menu.name }}</a>
+            </div>
+            <ul class="tabBar">
+            	{% for m in menu.get_root.get_children reversed  %}
+                <li data="{{ m.id }}">
+                    <a href="{{ m.url }}" target="_self" data="{{ m.id }}">{{ m.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- speech begin -->
+        <div class="speechCon">
+            <img src="/static/xinbang/images/speech_img1.jpg" alt="如果底蕴是岁月的长河沉淀出来的，气质是历经沧桑后的自然散发，那么，新邦企业成长的历程也许诠释了恒久的璀璨、历史的底蕴和雄浑的气质，成就了现代企业的风范。
+       新邦有今日之成就，并非是一种偶然，而是一种百炼成钢的收获。1985年，新邦企业成立，新邦人披星戴月、艰苦奋斗，以建筑行业作为长期经营发展方向，矢志不渝，现已形成了房屋建筑、房产开发、科技环保、建材贸易、文化旅游五大板块。
+       新邦人是一群开创者、耕耘者，因为对建筑品质的追求和对客户的诚信，开启了属于新邦人的事业。光荣与璀璨永远镌刻在新邦人的心中。
+       欲穷千里目，更上一层楼。勤则鼎新、和则立邦，我们将不辱企业使命，百折不挠，勇往直前，为中国城市化建设添砖加瓦！">
+            <img src="/static/xinbang/images/speech_img2.jpg" alt="新邦的明天会更美好！">
+        </div>
+        <!-- speech end -->
+    </div>
+</section>
+<!-- content end -->
+{% endblock %}

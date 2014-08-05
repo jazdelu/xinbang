@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}{{ page.name }}{% endblock %}
 {% block css %}
-<link rel="stylesheet" type="text/css" href="/static/xinbang/css/introduce.css">
+<link rel="stylesheet" type="text/css" href="/static/xinbang/css/idea.css">
 {% endblock %}
 {% block content %}
 <!-- bannerBar begin -->
@@ -13,7 +13,7 @@
 <!-- bannerBar end -->
 
 <!-- content begin -->
-<section>
+<section class="has-bg">
     <div id="content">
         <div class="titleBar">
              <div class="breadCrumb">
@@ -32,19 +32,14 @@
             </ul>
         </div>
 
-        <!-- speech begin -->
-        <div class="introCon">
-        	<div class="left">
-        		<div class="text">
-        			{{ page.content|safe}}
-        		</div>
-        		<img src="/static/xinbang/images/intro1.png">
-        	</div>
-        	<div class="right">
-        		<img src="/static/xinbang/images/intro2.png">
+        <!-- idea begin -->
+        <div class="ideaCon">
+        	<img src="/static/xinbang/images/linian1.png">
+        	<div class="text">
+        		{{ page.content|safe }}
         	</div>
         </div>
-        <!-- speech end -->
+        <!-- idea end -->
     </div>
 </section>
 <!-- content end -->

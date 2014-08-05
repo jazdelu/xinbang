@@ -45,7 +45,7 @@ class MenuItem(MPTTModel):
 			print s
 			self.url = s
 		if self.mtype == '1':
-			s+='page/'+str(self.category.id)+'/'
+			s+='page/'+str(self.page.id)+'/'
 			print s
 			self.url = s
 		super(MenuItem, self).save(*args, **kwargs)

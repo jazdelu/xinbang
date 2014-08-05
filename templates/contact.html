@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}{{ page.name }}{% endblock %}
 {% block css %}
-<link rel="stylesheet" type="text/css" href="/static/xinbang/css/introduce.css">
+<link rel="stylesheet" type="text/css" href="/static/xinbang/css/contact.css">
 {% endblock %}
 {% block content %}
 <!-- bannerBar begin -->
@@ -32,19 +32,23 @@
             </ul>
         </div>
 
-        <!-- speech begin -->
-        <div class="introCon">
-        	<div class="left">
-        		<div class="text">
-        			{{ page.content|safe}}
-        		</div>
-        		<img src="/static/xinbang/images/intro1.png">
-        	</div>
+        <!-- contact begin -->
+        <div class="contactCon">
+            <div class="left">
+        	   <img src="http://placehold.it/480x480">
+            </div>
         	<div class="right">
-        		<img src="/static/xinbang/images/intro2.png">
+                <div class = "row">
+            		<p>联系电话</p>
+                    <p>0577-8888888</p>
+                </div>
+                <div class= "row">
+                    <p>公司地址</p>
+                    <p>温州市鹿城区XXXXXXX</p>
+                </div>
         	</div>
         </div>
-        <!-- speech end -->
+        <!-- contact end -->
     </div>
 </section>
 <!-- content end -->

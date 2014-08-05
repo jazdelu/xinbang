@@ -1,0 +1,48 @@
+#content{
+	padding: 0;
+	margin: 0 auto;
+}
+
+.contactCon {
+    width: 968px;
+    margin: 0 auto;
+    padding:0px;
+    padding-bottom: 120px;
+    padding-top: 55px;
+    overflow: hidden;
+}
+.contactCon img{
+	display: block;
+	margin: 0 auto;
+	padding-left: 20px;
+}
+.contactCon .left{
+	float: left;
+	width: 500px
+}
+.contactCon .right{
+	float: left;
+	width: 468px;
+	padding-top: 140px;
+}
+.row{
+	margin-left: 80px;
+	margin-bottom: 90px;
+}
+.row:first-child{
+	padding-left: 90px;
+	background:url(../images/phone.png) center left no-repeat;
+}
+.row:last-child{
+	padding-left: 90px;
+	background:url(../images/location.png) center left no-repeat;
+}
+.row>p:first-child{
+	font-size: 22px;
+	color: #0d0d0d;
+	margin-bottom: 10px;
+}
+.row>p:last-child{
+	font-size: 14px;
+	color: #666;
+}
