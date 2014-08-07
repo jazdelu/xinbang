@@ -394,6 +394,7 @@ span,p,li{
     padding-bottom: 20px;
     margin-left: 20px;
     border-bottom: 1px solid #eee;
+    min-height: 145px;
 }
 #row2>.cat>ul>li{
     list-style-type: disc;
