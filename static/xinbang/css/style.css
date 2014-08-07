@@ -624,7 +624,7 @@ span,p,li{
 /*  template picture_text(pt)  */
 .ptCon {
     width: 1000px;
-    margin: 20px auto;
+    margin: 0 auto;
     padding-bottom: 120px;
     overflow: hidden;
 }
@@ -674,11 +674,14 @@ span,p,li{
     font-size: 12px;
 }
 .ptList .content{
+    padding-right: 20px;
     color:#777;
     font-size: 14px;
 }
 .ptList .panel{
     margin-top: 20px;
+    overflow: hidden;
+    padding-right: 20px;
 }
 .ptList .panel>a{
     float: right;
