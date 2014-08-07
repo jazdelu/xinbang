@@ -409,7 +409,6 @@ span,p,li{
     color: #525252;
 }
 #row2>.cat>ul>li>a:hover{
-    float: left;
     color: #525252;
     text-decoration: underline;
 }
@@ -441,7 +440,7 @@ span,p,li{
     left: -13px;
 
 }
-#col-4>div.msg{
+#col-4>ul{
     list-style: none;
     overflow: hidden;
     color: #525252;
