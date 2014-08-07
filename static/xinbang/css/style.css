@@ -245,7 +245,7 @@ span,p,li{
 }
 .cat{
     width: 500px;
-    margin-right: 30px;
+    margin-right: 70px;
 }
 .cat>.titleBar{
     padding: 0px 10px 7px 10px;
@@ -299,7 +299,7 @@ span,p,li{
 #row1>.cat>ul>li>div>p{
     font-size: 12px;
     color:#999;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 #row1>.cat>ul>li>div>a{
     font-size: 14px;
@@ -394,12 +394,13 @@ span,p,li{
     margin-top: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #eee;
+    margin-left: 20px;
 }
 #row2>.cat>ul>li{
-    padding: 4px 0;
     font-size: 14px;
     line-height: 18px;
     color: #8e2d34;
+    margin-bottom: 5px;
 }
 #row2>.cat>ul>li>a{
     float: left;
