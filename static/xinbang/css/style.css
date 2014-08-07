@@ -389,6 +389,10 @@ span,p,li{
 }
 #row2>.cat>ul{
     overflow: hidden;
+    color:#7d2033;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 20px;
     border-bottom: 1px solid #eee;
 }
 #row2>.cat>ul>li{
@@ -399,9 +403,9 @@ span,p,li{
     color: #8e2d34;
     margin-bottom: 5px;
     overflow: hidden;
+
 }
 #row2>.cat>ul>li>a{
-    float: left;
     color: #525252;
 }
 #row2>.cat>ul>li>a:hover{
