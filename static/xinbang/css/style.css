@@ -389,11 +389,7 @@ span,p,li{
 }
 #row2>.cat>ul{
     overflow: hidden;
-    color:#7d2033;
-    margin-top: 20px;
-    padding-bottom: 20px;
     border-bottom: 1px solid #eee;
-    margin-left: 20px;
 }
 #row2>.cat>ul>li{
     list-style-type: disc;
