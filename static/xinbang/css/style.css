@@ -388,8 +388,6 @@ span,p,li{
     margin-right: 70px;
 }
 #row2>.cat>ul{
-    list-style-type: disc;
-    list-style-position: inside;
     overflow: hidden;
     color:#7d2033;
     margin-top: 20px;
@@ -398,6 +396,8 @@ span,p,li{
     margin-left: 20px;
 }
 #row2>.cat>ul>li{
+    list-style-type: disc;
+    list-style-position: inside;
     font-size: 14px;
     line-height: 26px;
     color: #8e2d34;
