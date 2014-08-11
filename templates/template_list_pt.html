@@ -81,7 +81,7 @@
 {% block js %}
 <script type="text/javascript">
     $('.content').html(function(i,h){
-    return h.replace(/&nbsp;/g,'');
+    return h.replaceWith(/&nbsp;/g,'');
 });
 </script>
 {% endblock %}
