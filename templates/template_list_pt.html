@@ -80,8 +80,8 @@
 {% endblock %}
 {% block js %}
 <script type="text/javascript">
-    $('.content').html(function(i,h){
-    return h.replaceWith(/&nbsp;/g,'');
+    $('.content').each(function(){
+    $(this).html(.replaceAll(/&nbsp;/g,''));
 });
 </script>
 {% endblock %}
