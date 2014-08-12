@@ -50,7 +50,7 @@
                             </div>
                             <div class="content">
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                {{ p.content|striptags|truncatechars:190 }}
+                                {{ p.content|safe|striptags|truncatechars:190 }}
                             </div>
                             <div class="panel">
                                 <a href="/post/{{ p.id }}/">查看详情></a>
@@ -81,7 +81,7 @@
 {% block js %}
 <script type="text/javascript">
     $('.content').each(function(){
-    $(this).html(.replaceAll(/&nbsp;/g,''));
+    $(this).html($(this).html().replace(/&nbsp;/g,''));
 });
 </script>
 {% endblock %}
