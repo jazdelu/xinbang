@@ -487,16 +487,16 @@ span,p,li{
 #col-5 .titleBar{
     padding: 20px 5px;
 }
-#col-5 .titleBar>a:first-child{
-    margin-left:20px;
-    float:left;
-    font-size: 22px;
-}
 #col-5 .titleBar>a{
     margin-left:20px;
     float:right;
     font-size: 12px;
     line-height: 36px;
+}
+#col-5 .titleBar>a:first-child{
+    margin-left:20px;
+    float:left;
+    font-size: 22px;
 }
 #col-5 .titleBar>a:hover{
     text-decoration: underline;
