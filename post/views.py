@@ -12,7 +12,7 @@ def get_post_by_id(request,pid):
 	except:
 		raise Http404
 
-	posts = list(Post.objects.all())
+	posts = list(Post.objects.filter(category = post.category))
 	i = posts.index(post)
 	next_p = ''
 	prev_p = ''

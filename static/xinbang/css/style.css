@@ -424,7 +424,7 @@ span,p,li{
 #col-4{
     width: 340px;
     border: 1px solid #ccc;
-    max-height: 200px;
+    height: 168px;
     margin-top: 60px;
     padding:0 50px 35px 35px;
     border-radius: 15px;
@@ -487,7 +487,7 @@ span,p,li{
 #col-5 .titleBar{
     padding: 20px 5px;
 }
-#col-5 .titleBar>span{
+#col-5 .titleBar span{
     margin-left:20px;
     float:left;
     font-size: 22px;
