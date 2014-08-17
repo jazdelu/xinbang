@@ -81,7 +81,7 @@
 {% block js %}
 <script type="text/javascript">
     $('.content').each(function(){
-    $(this).html($(this).html().replace(/[\&nbsp\;]{1,10}/g,''));
+    $(this).html($(this).html().replace(/[\&nbspamrdquo\;]{1,10}/g,''));
 });
 </script>
 {% endblock %}
