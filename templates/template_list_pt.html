@@ -81,7 +81,7 @@
 {% block js %}
 <script type="text/javascript">
     $('.content').each(function(){
-    $(this).html($(this).html().replace(/\&\w+/g,''));
+    $(this).html($(this).html().replace(/\&\w+\;/g,''));
 });
 </script>
 {% endblock %}
