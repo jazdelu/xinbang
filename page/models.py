@@ -7,7 +7,6 @@ TEMPLATE_CHOICE = (
 	('organization.html',u'组织架构'),
 	('industry.html','集团产业'),
 	('idea.html',u'企业理念'),
-	('image.html',u'企业风采'),
 	('contact.html',u'联系我们'),
 )
 

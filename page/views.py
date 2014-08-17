@@ -17,4 +17,7 @@ def get_page_by_id(request,pid):
 	else:
 		menu = page.items.all()[0]
 
-	return render_to_response(page.template,{"page":page, "menu":menu},context_instance=RequestContext(request))
+	target =''
+	if request.GET:
+		target = '#'+request.GET['target']	
+	return render_to_response(page.template,{"page":page, "menu":menu,"target":target},context_instance=RequestContext(request))

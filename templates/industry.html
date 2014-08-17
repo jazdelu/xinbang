@@ -167,6 +167,13 @@
             $(".detailCon").hide();
             $(target).show();
         })
+        var target = "{{ target }}";
+        if (target != ""){
+            $(".j_ChangeDetail>li").siblings(".active").removeClass("active");
+            $(".j_ChangeDetail>li[data-target={{ target }}]").addClass("active");
+            $(".detailCon").hide();
+            $(target).show();
+        }
     })
 </script>
 {% endblock %}
