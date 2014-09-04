@@ -387,7 +387,7 @@ span,p,li{
 }
 #row2>.cat {
     margin-right: 70px;
-    margin-top: 80px;
+    margin-top: 40px;
 }
 #row2>.cat>ul{
     overflow: hidden;
@@ -425,7 +425,7 @@ span,p,li{
     width: 340px;
     border: 1px solid #ccc;
     height: 168px;
-    margin-top: 60px;
+    margin-top: 30px;
     padding:0 50px 35px 35px;
     border-radius: 15px;
 }
