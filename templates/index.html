@@ -116,7 +116,7 @@
 				<ul>
 					{% for p in zxgg %}
 					<li>
-						<a href="#">{{ p.title|truncatechars:25 }}</a>
+						<a href="/post/{{ p.id }}">{{ p.title|truncatechars:25 }}</a>
 						<span>{{ p.pub_date|date:"Y-m-d" }}</span>
 					</li>
 					{% endfor %}
